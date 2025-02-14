@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+:root {
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-50: hsl(330, 100%, 98%);
+  --rose-800: hsl(332, 51%, 32%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --white: hsl(0, 0%, 100%);
+
+  --spacing-300: 24px;
+  --spacing-150: 12px;
+  --spacing-50: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  background-color: var(--stone-150);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-container {
+  margin-block: 120px;
+  border-radius: 20px;
+  width: 735px;
+  background-color: var(--white);
+  padding: 40px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  h1,
+  h2 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+  }
+
+  h1 {
+    margin-block: var(--spacing-300);
+  }
+
+  .description {
+    margin-bottom: var(--spacing-300);
+  }
+
+  .prep-overview {
+    border-radius: 10px;
+    background-color: var(--rose-50);
+    padding: var(--spacing-300);
+
+    .prep-overview-heading {
+      color: var(--rose-800);
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: var(--spacing-300);
+    }
+
+    li::marker {
+      color: var(--rose-800);
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: var(--spacing-300);
+  }
+
+  li {
+    margin-bottom: var(--spacing-150);
+    padding-left: var(--spacing-150);
+  }
+
+  li::marker {
+    color: var(--brown-800);
+    font-weight: bold;
+  }
+
+  h2 {
+    color: var(--brown-800);
+    margin-bottom: 24px;
+  }
+
+  section {
+    padding: 30px;
+    border-bottom: 1px solid var(--stone-150);
+  }
+
+  section:last-child {
+    border: none;
+  }
+
+  table {
+    width: 100%;
+    margin-top: var(--spacing-300);
+    border-collapse: collapse;
+
+    tr {
+      border-bottom: 1px solid var(--stone-150);
+
+      td {
+        padding-left: var(--spacing-300);
+      }
+
+      td:last-child {
+        color: var(--brown-800);
+        line-height: 46px;
+      }
+    }
+  }
+}
